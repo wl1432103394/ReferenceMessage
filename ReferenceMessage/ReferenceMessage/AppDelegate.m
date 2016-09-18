@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WLArticleViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    WLArticleViewController *viewV = [[WLArticleViewController alloc] init];
+    
+    UITabBarController *MainTabBar = [[UITabBarController alloc] init];
+    UINavigationController *firstNV = [[UINavigationController alloc] initWithRootViewController:@""];
+    
     return YES;
 }
 

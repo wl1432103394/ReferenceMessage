@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface WLArticleViewController : MainViewController
 
 @end
 

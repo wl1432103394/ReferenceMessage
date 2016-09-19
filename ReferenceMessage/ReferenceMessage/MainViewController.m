@@ -48,7 +48,6 @@
 }
 
 - (void)addRightBarButtonItemWithImage:(UIImage *)image {
-    //    UIImage *image = [UIImage imageNamed:@"feed_column"];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStyleDone target:self action:@selector(rightBarbuttonItemAction:)];
     self.navigationItem.rightBarButtonItem = leftItem;
 }
@@ -57,6 +56,17 @@
     UIBarButtonItem *rightItem =[[UIBarButtonItem alloc] initWithTitle:text style:UIBarButtonItemStyleDone target:self action:@selector(rightBarbuttonItemAction:)];
     [rightItem setTintColor:[UIColor blueColor]];
     self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+- (void)setLeftBarbuttonItemColorWithColor:(UIColor *)color {
+    self.navigationItem.leftBarButtonItem.tintColor = color;
+}
+
+- (void)setRightBarbuttonItemColorWithColor:(UIColor *)color {
+    self.navigationItem.rightBarButtonItem.tintColor = color;
+}
+- (void)setnavigationItemTitleColorWithColor:(UIColor *)color {
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:color}];
 }
 
 

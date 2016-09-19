@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.title = @"我";
+    UIImage *image = [UIImage imageNamed:@"tab_message@2x"];
+    [self addRightBarButtonItemWithImage:image];
+    [self setRightBarbuttonItemColorWithColor:[UIColor grayColor]];
 }
 
 - (void)didReceiveMemoryWarning {

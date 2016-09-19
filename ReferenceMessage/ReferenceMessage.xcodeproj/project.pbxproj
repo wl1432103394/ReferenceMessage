@@ -12,6 +12,8 @@
 		81514F5C1D8E681D00A9F6FF /* WLMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81514F5B1D8E681D00A9F6FF /* WLMessageViewController.m */; };
 		81514F5F1D8E682500A9F6FF /* WLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81514F5E1D8E682500A9F6FF /* WLMeViewController.m */; };
 		81514F621D8E682E00A9F6FF /* WLMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81514F611D8E682E00A9F6FF /* WLMoreViewController.m */; };
+		81514F651D8E86B400A9F6FF /* MainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81514F641D8E86B400A9F6FF /* MainTableView.m */; };
+		81514F681D8E89EA00A9F6FF /* WLMessageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81514F671D8E89EA00A9F6FF /* WLMessageTableView.m */; };
 		81DBFAFE1D86923B005D53DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DBFAFD1D86923B005D53DD /* main.m */; };
 		81DBFB011D86923B005D53DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81DBFB001D86923B005D53DD /* AppDelegate.m */; };
 		81DBFB071D86923C005D53DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81DBFB051D86923C005D53DD /* Main.storyboard */; };
@@ -403,6 +405,10 @@
 		81514F5E1D8E682500A9F6FF /* WLMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLMeViewController.m; sourceTree = "<group>"; };
 		81514F601D8E682E00A9F6FF /* WLMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLMoreViewController.h; sourceTree = "<group>"; };
 		81514F611D8E682E00A9F6FF /* WLMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLMoreViewController.m; sourceTree = "<group>"; };
+		81514F631D8E86B400A9F6FF /* MainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableView.h; sourceTree = "<group>"; };
+		81514F641D8E86B400A9F6FF /* MainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableView.m; sourceTree = "<group>"; };
+		81514F661D8E89EA00A9F6FF /* WLMessageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLMessageTableView.h; sourceTree = "<group>"; };
+		81514F671D8E89EA00A9F6FF /* WLMessageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WLMessageTableView.m; sourceTree = "<group>"; };
 		81DBFAF91D86923B005D53DD /* ReferenceMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReferenceMessage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DBFAFD1D86923B005D53DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81DBFAFF1D86923B005D53DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -824,6 +830,8 @@
 				81DBFB001D86923B005D53DD /* AppDelegate.m */,
 				81DBFE401D86A265005D53DD /* MainViewController.h */,
 				81DBFE411D86A265005D53DD /* MainViewController.m */,
+				81514F631D8E86B400A9F6FF /* MainTableView.h */,
+				81514F641D8E86B400A9F6FF /* MainTableView.m */,
 				81DBFB051D86923C005D53DD /* Main.storyboard */,
 				81DBFE431D86A94B005D53DD /* Helper */,
 				81DBFB311D869BED005D53DD /* images */,
@@ -952,6 +960,8 @@
 		81DBFB2C1D86949B005D53DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81514F661D8E89EA00A9F6FF /* WLMessageTableView.h */,
+				81514F671D8E89EA00A9F6FF /* WLMessageTableView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1416,6 +1426,7 @@
 				TargetAttributes = {
 					81DBFAF81D86923B005D53DD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = AN74G8J783;
 					};
 					81DBFB111D86923C005D53DD = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1831,9 +1842,11 @@
 			files = (
 				81DBFB011D86923B005D53DD /* AppDelegate.m in Sources */,
 				81514F5F1D8E682500A9F6FF /* WLMeViewController.m in Sources */,
+				81514F681D8E89EA00A9F6FF /* WLMessageTableView.m in Sources */,
 				81DBFAFE1D86923B005D53DD /* main.m in Sources */,
 				81514F581D8E681400A9F6FF /* WLArticleViewController.m in Sources */,
 				81514F5C1D8E681D00A9F6FF /* WLMessageViewController.m in Sources */,
+				81514F651D8E86B400A9F6FF /* MainTableView.m in Sources */,
 				81DBFE421D86A265005D53DD /* MainViewController.m in Sources */,
 				81514F621D8E682E00A9F6FF /* WLMoreViewController.m in Sources */,
 				81514F591D8E681400A9F6FF /* WLSearchResultViewController.m in Sources */,
@@ -1964,6 +1977,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AN74G8J783;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReferenceMessage/Helper/PrefixHeader.pch";
 				INFOPLIST_FILE = ReferenceMessage/Info.plist;
@@ -1978,6 +1992,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AN74G8J783;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ReferenceMessage/Helper/PrefixHeader.pch";
 				INFOPLIST_FILE = ReferenceMessage/Info.plist;

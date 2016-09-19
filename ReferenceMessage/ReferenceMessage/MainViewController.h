@@ -10,15 +10,22 @@
 
 @interface MainViewController : UIViewController
 
-- (void)addLeftBarButtonItemWithImage:(UIImage *)image;
+- (void)addLeftBarButtonItemWithImage:(UIImage *)image;//设置leftBarbuttonItem图片
 
-- (void)addLeftBarButtonItemWithText:(NSString *)text;
+- (void)addLeftBarButtonItemWithText:(NSString *)text;//设置leftBarbuttonItem文字
 
-- (void)addRightBarButtonItemWithImage:(UIImage *)image;
+- (void)addRightBarButtonItemWithImage:(UIImage *)image;//设置rightBarbuttonItem图片
 
-- (void)addRightBarButtonItemWithText:(NSString *)text;
+- (void)addRightBarButtonItemWithText:(NSString *)text;//设置rightBarbuttonItem文字
 
-- (void)leftBarbuttonItemAction:(UIBarButtonItem *)item;
+- (void)leftBarbuttonItemAction:(UIBarButtonItem *)item;//设置leftBarbuttonItem触发方法
 
-- (void)rightBarbuttonItemAction:(UIBarButtonItem *)item;
+- (void)rightBarbuttonItemAction:(UIBarButtonItem *)item;//设置rightBarbuttonItem触发方法
+
+- (void)setLeftBarbuttonItemColorWithColor:(UIColor *)color;//设置leftBarButtonItem的颜色
+
+- (void)setRightBarbuttonItemColorWithColor:(UIColor *)color;//设置rightBarButtonItem的颜色
+
+- (void)setnavigationItemTitleColorWithColor:(UIColor *)color;//设置title颜色
+
 @end

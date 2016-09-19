@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "WLArticleViewController.h"
+#import "WLMessageViewController.h"
+#import "WLMeViewController.h"
+#import "WLMoreViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +20,46 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
     // Override point for customization after application launch.
-    WLArticleViewController *viewV = [[WLArticleViewController alloc] init];
+    WLArticleViewController *articleVC = [[WLArticleViewController alloc] init];
+    WLMessageViewController *messageVC = [[WLMessageViewController alloc] init];
+    WLMeViewController *meVC = [[WLMeViewController alloc] init];
+    WLMoreViewController *moreVC = [[WLMoreViewController alloc] init];
     
-    UITabBarController *MainTabBar = [[UITabBarController alloc] init];
-    UINavigationController *firstNV = [[UINavigationController alloc] initWithRootViewController:@""];
+    UINavigationController *arricleNV = [[UINavigationController alloc] initWithRootViewController:articleVC];
+    UINavigationController *messageNV = [[UINavigationController alloc] initWithRootViewController:messageVC];
+    UINavigationController *meNV = [[UINavigationController alloc] initWithRootViewController:meVC];
+    UINavigationController *moreNV = [[UINavigationController alloc] initWithRootViewController:moreVC];
     
+    UIImage *arricleImage = [UIImage imageNamed:@"tab_article@2x"];
+    UIImage *messageImage = [UIImage imageNamed:@"tab_message@2x"];
+    UIImage *meImage = [UIImage imageNamed:@"tab_me@2x"];
+    UIImage *moreImage = [UIImage imageNamed:@"tab_more@2x"];
+    
+    UIImage *arricleSelectedImage = [UIImage imageNamed:@"tab_article_pressed@2x"];
+    UIImage *messageSelectedImage = [UIImage imageNamed:@"tab_more_message@2x"];
+    UIImage *meSelectedImage = [UIImage imageNamed:@"tab_more_me@2x"];
+    UIImage *moreSelectedImage = [UIImage imageNamed:@"tab_more_pressed@2x"];
+    
+    UITabBarItem *arricleTabBarItem = [[UITabBarItem alloc] initWithTitle:@"文章" image:arricleImage selectedImage:arricleSelectedImage];
+    UITabBarItem *messageTabBarItem = [[UITabBarItem alloc] initWithTitle:@"消息" image:messageImage selectedImage:messageSelectedImage];
+    UITabBarItem *meTabBarItem = [[UITabBarItem alloc] initWithTitle:@"我" image:meImage selectedImage:meSelectedImage];
+    UITabBarItem *moreTabBarItem = [[UITabBarItem alloc] initWithTitle:@"更多" image:moreImage selectedImage:moreSelectedImage];
+    
+    arricleNV.tabBarItem = arricleTabBarItem;
+    messageNV.tabBarItem = messageTabBarItem;
+    meNV.tabBarItem = meTabBarItem;
+    moreNV.tabBarItem = moreTabBarItem;
+    
+    UITabBarController *mainTabBar = [[UITabBarController alloc] init];
+    mainTabBar.tabBar.tintColor = Bar_Tint_Color;//改变点击图片的颜色
+    mainTabBar.viewControllers = @[arricleNV, messageNV, meNV, moreNV];
+    
+    self.window.rootViewController = mainTabBar;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
